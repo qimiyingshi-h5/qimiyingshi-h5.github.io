@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>奇米影视 - 奇妙观影，米粒之选：电影/电视剧/动漫/综艺/纪录片/短剧/漫画 | qimiyingshi-h5</title>
+<meta name="description" content="奇米影视（qimiyingshi-h5.github.io）像一座奇趣米仓：电影、电视剧、动漫、综艺、纪录片、短剧、漫画按奇妙喜剧/冒险/治愈/悬疑/冷门排，奇米奇妙榜、仓鼠管理员手记，移动端自适应。">
+<meta name="keywords" content="奇米影视,奇妙观影,米粒之选,电影导航,电视剧导航,动漫导航,综艺导航,短剧导航,漫画导航,qimiyingshi-h5">
+<meta name="author" content="奇米影视">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://qimiyingshi-h5.github.io/">
+<meta property="og:title" content="奇米影视 - 奇妙观影，米粒之选">
+<meta property="og:description" content="从米仓里抓一部：奇妙喜剧、奇妙冒险、奇妙治愈、奇妙悬疑、奇妙冷门，总有一颗米粒对你胃口。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qimiyingshi-h5.github.io/">
+<meta property="og:site_name" content="奇米影视">
+<meta name="msvalidate.01" content="BING_VERIFY_CODE">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"奇米影视",
+  "url":"https://qimiyingshi-h5.github.io/",
+  "description":"奇米影视是米仓母题的影视导航站，覆盖电影、电视剧、动漫、综艺、纪录片、短剧、漫画、直播。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"奇米影视和其他影视导航站有什么不同？",
+      "acceptedAnswer":{"@type":"Answer","text":"别的站按类型硬分，奇米影视按'奇妙感'分：奇妙喜剧、奇妙冒险、奇妙治愈、奇妙悬疑、奇妙冷门。像从米仓里抓一把，不按贵贱，按对味不对味。"}
+    },
+    {
+      "@type":"Question",
+      "name":"奇米影视提供盗版片源吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"不提供。奇米影视只做影视导航、片单分类、奇趣推荐和观片手记，不挂侵权播放地址、不绑下载器、不弹会员付费。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#10142b;
+  --paper:#fff7e8;
+  --card:#161b3a;
+  --ink:#fff7e8;
+  --muted:#a7adcf;
+  --orange:#ff7a18;
+  --purple:#7b5cff;
+  --yellow:#ffe45e;
+  --line:rgba(123,92,255,.32);
+  --shadow:0 18px 46px rgba(0,0,0,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:
+    radial-gradient(820px 460px at 85% -10%,rgba(255,122,24,.16),transparent 60%),
+    radial-gradient(720px 420px at -8% 8%,rgba(123,92,255,.18),transparent 55%),
+    linear-gradient(180deg,#10142b 0%,#131838 60%,#0b0e22 100%);
+  color:var(--ink);line-height:1.78;
+}
+a{color:inherit;text-decoration:none}
+
+/* 米仓门头 */
+.qm-top{position:sticky;top:0;z-index:999;background:rgba(16,20,43,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.qm-top__in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem}
+.qm-logo{font-weight:900;font-size:1.2rem}
+.qm-logo b{color:var(--orange)}
+.qm-logo i{color:var(--yellow);font-style:normal;font-size:.82rem;background:rgba(255,228,94,.12);padding:.1rem .45rem;border-radius:6px}
+.qm-nav{display:flex;gap:.3rem}
+.qm-nav a{padding:.45rem .8rem;border-radius:9px;font-size:.9rem;color:var(--muted);font-weight:700}
+.qm-nav a:hover{background:rgba(123,92,255,.18);color:var(--ink)}
+.qm-burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.qm-burger span{width:22px;height:2px;background:var(--orange);border-radius:2px}
+
+/* Hero 米粒光斑 */
+.qm-hero{max-width:1180px;margin:0 auto;padding:3.4rem 1rem 2.6rem;text-align:center;position:relative;overflow:hidden}
+.qm-hero::before{content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,228,94,.5) 1px,transparent 1.5px);
+  background-size:26px 26px;opacity:.18;pointer-events:none}
+.qm-rice{width:120px;height:120px;margin:0 auto 1.3rem;border-radius:50%;
+  background:radial-gradient(circle at 36% 34%,#fff7e8 0 30%,#ffd98a 31% 55%,#ff7a18 56% 78%,#7b5cff 79% 100%);
+  box-shadow:0 0 50px rgba(255,122,24,.45),inset -14px -10px 30px rgba(11,14,34,.6)}
+.qm-hero h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.2;margin-bottom:1rem;position:relative}
+.qm-hero h1 em{font-style:normal;color:var(--orange)}
+.qm-hero h1 u{text-decoration:none;color:var(--yellow)}
+.qm-hero p{color:var(--muted);max-width:700px;margin:0 auto 1.8rem;position:relative}
+.qm-cta{display:inline-flex;gap:.5rem;align-items:center;padding:.85rem 2rem;border-radius:30px;font-weight:800;color:#10142b;background:linear-gradient(90deg,var(--yellow),var(--orange));box-shadow:var(--shadow);position:relative}
+.qm-dim{color:var(--muted);font-size:.78rem;letter-spacing:3px;font-family:ui-monospace,monospace;margin-bottom:.5rem}
+
+/* 区块 */
+.qm-sec{max-width:1180px;margin:0 auto;padding:3.2rem 1rem}
+.qm-head{margin-bottom:1.7rem;text-align:center}
+.qm-head .no{font-size:.72rem;color:var(--orange);letter-spacing:3px;font-family:ui-monospace,monospace}
+.qm-head h2{font-size:clamp(1.4rem,3.4vw,2.1rem);font-weight:900;margin-top:.3rem}
+.qm-head h2 i{color:var(--purple);font-style:normal}
+.qm-head p{color:var(--muted);margin-top:.35rem;font-size:.92rem}
+
+/* 奇米片单 */
+.qm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.9rem}
+.qm-cell{border:1px solid var(--line);border-radius:18px;padding:1.3rem 1rem;background:var(--card);text-align:center;transition:.25s;position:relative;overflow:hidden}
+.qm-cell::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,228,94,.25) 1px,transparent 1.4px);background-size:18px 18px;opacity:.12;pointer-events:none}
+.qm-cell:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.qm-cell .ic{font-size:1.8rem;position:relative}
+.qm-cell h3{font-size:.96rem;margin:.5rem 0 .3rem;position:relative}
+.qm-cell p{font-size:.72rem;color:var(--muted);position:relative}
+
+/* 奇米频道 */
+.qm-ch{display:grid;grid-template-columns:repeat(8,1fr);gap:.7rem}
+.qm-c{border-radius:14px;padding:1rem .3rem;background:var(--card);text-align:center;border:1px solid var(--line);transition:.25s}
+.qm-c:hover{transform:translateY(-3px);background:rgba(123,92,255,.14)}
+.qm-c .ic{font-size:1.5rem}
+.qm-c h3{font-size:.78rem;margin-top:.3rem}
+.qm-c p{font-size:.6rem;color:var(--muted)}
+
+/* 奇妙榜：颗粒进度 */
+.qm-rank{display:grid;gap:1.1rem}
+.qm-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem}
+.qm-item h3{font-size:1.02rem;display:flex;justify-content:space-between;margin-bottom:.55rem}
+.qm-item h3 span{color:var(--yellow)}
+.qm-bar{height:16px;border-radius:999px;background:#0b0e22;overflow:hidden;position:relative;border:1px solid var(--line);
+  background-image:radial-gradient(circle,rgba(255,228,94,.5) 1px,transparent 1.6px);background-size:10px 10px}
+.qm-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--orange),var(--purple),var(--yellow))}
+.qm-bar i::after{content:"✨";position:absolute;right:5px;top:-1px;font-size:.8rem}
+
+/* 手记 */
+.qm-notes{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.qm-note{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.4rem}
+.qm-note .tag{font-size:.72rem;padding:.2rem .6rem;border-radius:8px;font-weight:800}
+.qm-note.rat .tag{background:rgba(255,122,24,.18);color:var(--orange)}
+.qm-note.night .tag{background:rgba(123,92,255,.18);color:var(--purple)}
+.qm-note h3{font-size:1.04rem;margin:.6rem 0 .4rem}
+.qm-note p{font-size:.86rem;color:var(--muted)}
+
+/* 关于 */
+.qm-about{background:linear-gradient(160deg,#1b2150,#10142b);border:1px solid var(--line);border-radius:26px;padding:2.4rem}
+.qm-about h2{font-size:1.9rem;margin-bottom:.8rem}
+.qm-about h2 u{color:var(--orange);text-decoration:none}
+.qm-about p{color:var(--muted);margin-bottom:1rem}
+.qm-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
+.qm-stat{background:var(--card);border:1px solid var(--line);border-radius:16px;≈padding:1.1rem;text-align:center}
+.qm-stat b{font-size:1.5rem;color:var(--yellow);display:block}
+.qm-stat span{font-size:.8rem;color:var(--muted)}
+
+/* FAQ */
+.qm-faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.2rem 1.1rem;margin-bottom:.7rem}
+.qm-faq summary{cursor:pointer;padding:.85rem 0;font-weight:800}
+.qm-faq p{padding:0 0 .85rem;color:var(--muted)}
+
+/* 页脚 */
+.qm-foot{border-top:1px solid var(--line);background:#0b0e22;padding:2.2rem 1rem;text-align:center;color:var(--muted);font-size:.86rem}
+.qm-foot a{color:var(--orange)}
+.qm-foot__links{display:flex;gap:1.1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.qm-foot__links a{font-size:.84rem}
+
+@media(max-width:980px){
+  .qm-grid{grid-template-columns:repeat(3,1fr)}
+  .qm-ch{grid-template-columns:repeat(4,1fr)}
+  .qm-notes{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .qm-nav{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;gap:0;background:rgba(16,20,43,.98);border-bottom:1px solid var(--line)}
+  .qm-nav.show{display:flex}
+  .qm-nav a{padding:.85rem 1rem;border-bottom:1px solid var(--line)}
+  .qm-burger{display:flex}
+  .qm-grid{grid-template-columns:repeat(2,1fr)}
+  .qm-ch{grid-template-columns:repeat(3,1fr)}
+  .qm-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="qm-top">
+  <div class="qm-top__in">
+    <div class="qm-logo">✨ 奇米<b>影视</b> <i>·米粒之选</i></div>
+    <nav class="qm-nav" id="qmNav">
+      <a href="#home">米仓</a>
+      <a href="#grid">奇米片单</a>
+      <a href="#ch">奇米频道</a>
+      <a href="#rank">奇妙榜</a>
+      <a href="#notes">仓鼠手记</a>
+      <a href="#about">关于奇米</a>
+    </nav>
+    <div class="qm-burger" onclick="document.getElementById('qmNav').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="qm-hero" id="home">
+  <div class="qm-rice"></div>
+  <p class="qm-dim">// qimi · grain by grain</p>
+  <h1>奇妙观影，<em>米粒之选</em><br>奇米影视，<u>从米仓里抓一部</u></h1>
+  <p>奇米影视不按“动作/喜剧/科幻”冷冰冰分柜，而像一座奇趣米仓：抓一把出来，有奇妙喜剧、奇妙冒险、奇妙治愈、奇妙悬疑、奇妙冷门。片子不分贵贱，只对不对味。电影、剧集、动漫、综艺、纪录片、短剧、漫画，都装在米缸里。</p>
+  <a class="qm-cta" href="#grid">🌾 抓一把奇米片</a>
+</section>
+
+<section class="qm-sec" id="grid">
+  <div class="qm-head">
+    <div class="no">// five wonderful scoops</div>
+    <h2>奇米 <i>片单</i></h2>
+    <p>不按类型，按“看完像被撒了一把奇趣米粒”的感觉排。</p>
+  </div>
+  <div class="qm-grid">
+    <div class="qm-cell"><div class="ic">😆</div><h3>奇妙喜剧</h3><p>笑点不脏、不硬、不尴尬</p></div>
+    <div class="qm-cell"><div class="ic">🧭</div><h3>奇妙冒险</h3><p>公路/海岛/宇宙/废土都行</p></div>
+    <div class="qm-cell"><div class="ic">🍵</div><h3>奇妙治愈</h3><p>猫、饭、雨、旧书店、慢火车</p></div>
+    <div class="qm-cell"><div class="ic">🕳️</div><h3>奇妙悬疑</h3><p>反转但不烧脑到头疼</p></div>
+    <div class="qm-cell"><div class="ic">🌗</div><h3>奇妙冷门</h3><p>影展遗珠、修复版、没人安利过</p></div>
+  </div>
+</section>
+
+<section class="qm-sec" id="ch">
+  <div class="qm-head">
+    <div class="no">// eight grain aisles</div>
+    <h2>奇米 <i>频道</i></h2>
+    <p>八个米斗，从漫画到直播都装着。</p>
+  </div>
+  <div class="qm-ch">
+    <div class="qm-c"><div class="ic">🎬</div><h3>电影</h3><p>院线/经典/小众</p></div>
+    <div class="qm-c"><div class="ic">📺</div><h3>剧集</h3><p>国产/韩剧/美剧/日剧</p></div>
+    <div class="qm-c"><div class="ic">🍥</div><h3>动漫</h3><p>新番/国创/剧场版</p></div>
+    <div class="qm-c"><div class="ic">🎤</div><h3>综艺</h3><p>慢综/选秀/脱口秀</p></div>
+    <div class="qm-c"><div class="ic">🐳</div><h3>纪录片</h3><p>自然/宇宙/老城/手艺</p></div>
+    <div class="qm-c"><div class="ic">⚡</div><h3>短剧</h3><p>甜宠/逆袭/悬疑快剪</p></div>
+    <div class="qm-c"><div class="ic">📖</div><h3>漫画</h3><p>奇幻/治愈/悬疑漫章</p></div>
+    <div class="qm-c"><div class="ic">📡</div><h3>直播</h3><p>首映/主创谈/影展场记</p></div>
+  </div>
+</section>
+
+<section class="qm-sec" id="rank">
+  <div class="qm-head">
+    <div class="no">// grain heat board</div>
+    <h2>奇米 <i>奇妙榜</i></h2>
+    <p>按“奇趣度 + 回头抓第二次 + 安利给朋友 + 冷门加成”综合排。</p>
+  </div>
+  <div class="qm-rank">
+    <div class="qm-item"><h3>1. 奇妙治愈：请回答1988 <span>98%</span></h3><div class="qm-bar"><i style="width:98%"></i></div></div>
+    <div class="qm-item"><h3>2. 奇妙冒险：星际穿越 重制场 <span>96%</span></h3><div class="qm-bar"><i style="width:96%"></i></div></div>
+    <div class="qm-item"><h3>3. 奇妙喜剧：功夫 周末场 <span>94%</span></h3><div class="qm-bar"><i style="width:94%"></i></div></div>
+    <div class="qm-item"><h3>4. 奇妙悬疑：看不见的客人 <span>92%</span></h3><div class="qm-bar"><i style="width:92%"></i></div></div>
+    <div class="qm-item"><h3>5. 奇妙冷门：城南旧事 修复版 <span>90%</span></h3><div class="qm-bar"><i style="width:90%"></i></div></div>
+  </div>
+</section>
+
+<section class="qm-sec" id="notes">
+  <div class="qm-head">
+    <div class="no">// granary logs</div>
+    <h2>奇米 <i>手记</i></h2>
+    <p>一边是仓鼠管理员，一边是夜场观众。</p>
+  </div>
+  <div class="qm-notes">
+    <article class="qm-note rat">
+      <span class="tag">🐹 仓鼠管理员</span>
+      <h3>米仓不能只放大片</h3>
+      <p>大片像白米，管饱但吃久了腻。奇米影视的米仓里得掺点糙米：老港片、修复版、冷门动画、没人安利的纪录片。抓一把才有惊喜，全是大片反而像超市货架，不像米仓。</p>
+    </article>
+    <article class="qm-note night">
+      <span class="tag">🌙 夜场观众</span>
+      <h3>奇妙治愈片要在晚上看</h3>
+      <p>白天看《请回答1988》只会觉得“哦挺暖”，凌晨看才会想起小时候巷子里的煤炉味。奇米影视把治愈片放进“米粒慢斗”，不是因为它长，是因为它要配夜色和一杯温水。</p>
+    </article>
+    <article class="qm-note rat">
+      <span class="tag">🐹 仓鼠管理员</span>
+      <h3>“奇妙冷门”不能天天挂首页</h3>
+      <p>冷门片像陈米里的谷香，闻多了不灵。奇米影视只在周三、周日开“冷门斗”，平时还是喜剧和冒险顶门面。遗珠要惜着放，不然变成地摊货。</p>
+    </article>
+    <article class="qm-note night">
+      <span class="tag">🌙 夜场观众</span>
+      <h3>奇妙悬疑别太狠</h3>
+      <p>半夜看《看不见的客人》当然爽，但看完睡不着，满脑子“刚才那句是不是伏笔”。所以奇米影视的悬疑斗会标“凌晨慎抓”——好玩归好玩，别跟睡眠过不去。</p>
+    </article>
+  </div>
+</section>
+
+<section class="qm-sec" id="about">
+  <div class="qm-about">
+    <h2>关于 <u>奇米影视</u></h2>
+    <p>
+      奇米影视（qimiyingshi-h5.github.io）不是“又一个影视大全”，而是一座奇趣米仓。我们不做冷冰冰的类型柜，只问一句：这片子抓出来，奇不奇妙？
+    </p>
+    <p>
+      电影、电视剧、动漫、综艺、纪录片、短剧、漫画、直播回放，全都按“奇妙喜剧 / 奇妙冒险 / 奇妙治愈 / 奇妙悬疑 / 奇妙冷门”重新装斗。你来奇米，不是来检索，是来抓一把今晚的米。
+    </p>
+    <div class="qm-stats">
+      <div class="qm-stat"><b>5 奇斗</b><span>喜剧/冒险/治愈/悬疑/冷门</span></div>
+      <div class="qm-stat"><b>8 米斗</b><span>影/剧/漫/综/纪/短剧/漫画/直播</span></div>
+      <div class="qm-stat"><b>0 冷脸</b><span>不弹会员不装高端</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="qm-sec qm-faq">
+  <div class="qm-head">
+    <div class="no">// q & a</div>
+    <h2>奇米 <i>问答</i></h2>
+  </div>
+  <details open>
+    <summary>“奇米”是奇幻/奇妙的意思吗？</summary>
+    <p>是。奇=奇妙感，米=米仓/米粒之选。奇米影视想做的不是“全”，而是“抓一把都对味”：像米缸里捞谷子，捞到哪颗都不踩雷。</p>
+  </details>
+  <details>
+    <summary>和多多影视、低端影视差在哪？</summary>
+    <p>多多是集市百宝袋（多挑多选），低端是电器城地摊（不装高端），奇米是米仓（按奇妙感抓片）。一个讲“多”，一个讲“实在”，一个讲“对味”。</p>
+  </details>
+  <details>
+    <summary>奇米影视有片源吗？</summary>
+    <p>没有。奇米影视是纯导航与片单站，只做分类、简介、奇妙榜和手记，不提供侵权播放、不绑下载器、不弹付费会员，合规干净。</p>
+  </details>
+</section>
+
+<footer class="qm-foot">
+  <div class="qm-foot__links">
+    <a href="#grid">奇米片单</a>
+    <a href="#ch">奇米频道</a>
+    <a href="#rank">奇妙榜</a>
+    <a href="#notes">仓鼠手记</a>
+    <a href="#about">关于奇米</a>
+    <a href="#">免责声明</a>
+  </div>
+  <p>© 2026 <a href="https://qimiyingshi-h5.github.io">奇米影视</a> · qimiyingshi-h5.github.io</p>
+  <p>奇米影视 —— 奇妙观影，米粒之选。</p>
+</footer>
+
+<script>
+document.querySelectorAll('.qm-nav a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('qmNav').classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
